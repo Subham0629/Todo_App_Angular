@@ -1,0 +1,10 @@
+<h2>Create Todo</h2>
+<form (submit)="createTodo()">
+  <label>Title:</label>
+  <input type="text" [(ngModel)]="newTodo.title" name="title" required>
+  
+  <label>Description:</label>
+  <textarea [(ngModel)]="newTodo.description" name="description"></textarea>
+  
+  <button type="submit">Create Todo</button>
+</form>

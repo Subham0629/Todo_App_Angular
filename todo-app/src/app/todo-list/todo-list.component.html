@@ -1,0 +1,15 @@
+<h2>Todo List</h2>
+<ul class="container">
+  <li *ngFor="let todo of todos">
+    <div class="todo-item">
+      <span [class.completed]="todo.completed">{{ todo.title }}</span>
+      <span>{{ todo.description }}</span>
+      <span class="completion-status">{{ todo.completed ? 'true' : 'false' }}</span>
+      <div class="button-group">
+        <button (click)="markAsCompleted(todo)">Mark as Completed</button>
+        <button (click)="deleteTodo(todo)">Delete</button>
+      </div>
+    </div>
+    <br> <!-- Add a line break -->
+  </li>
+</ul>
